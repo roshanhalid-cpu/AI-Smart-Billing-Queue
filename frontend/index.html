@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Billing Queue Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Smart Billing Queue Management</h1>
+            <p>AI-Based Supermarket Billing Queue Monitoring System</p>
+        </div>
+
+
+        <!-- Billing Counters -->
+        <h2>Billing Counter Status</h2>
+
+        <div class="counters">
+
+            <!-- Counter 1 -->
+            <div class="counter">
+
+    <h2>Counter 1</h2>
+
+    <div class="info">
+        👥 Customers:
+        <strong id="counter1Customers">8</strong>
+    </div>
+
+    <button onclick="addCustomer(1)">+ Add Customer</button>
+    <button onclick="serveCustomer(1)">- Serve Customer</button>
+
+    <div class="info">
+        ⏱️ Waiting Time:
+        <strong id="counter1Time">16 min</strong>
+    </div>
+
+    <div
+        id="counter1Status"
+        class="status high">
+        🔴 HIGH
+    </div>
+
+</div>
+
+
+            <!-- Counter 2 -->
+            <div class="counter">
+
+    <h2>Counter 2</h2>
+
+    <div class="info">
+        👥 Customers:
+        <strong id="counter2Customers">3</strong>
+    </div>
+
+    <div class="info">
+        ⏱️ Waiting Time:
+        <strong id="counter2Time">6 min</strong>
+    </div>
+
+    <div
+        id="counter2Status"
+        class="status low">
+        LOW
+    </div>
+
+</div>
+
+
+            <!-- Counter 3 -->
+            <div class="counter">
+
+    <h2>Counter 3</h2>
+
+    <div class="info">
+        👥 Customers:
+        <strong id="counter3Customers">6</strong>
+    </div>
+
+    <div class="info">
+        ⏱️ Waiting Time:
+        <strong id="counter3Time">12 min</strong>
+    </div>
+
+    <div
+        id="counter3Status"
+        class="status medium">
+        MEDIUM
+    </div>
+
+</div>
+
+
+        <!-- AI Recommendation -->
+        <div class="ai-box">
+
+            <h2>🤖 AI Recommendation</h2>
+
+            <p id="aiRecommendation" class="ai-message">
+    Analyzing billing queues...
+</p>
+<button onclick="openAdditionalCounter()">
+    Open Additional Counter
+</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
