@@ -42,6 +42,8 @@ Estimated waiting time is calculated as:
 - Estimated waiting time
 - Queue status classification
 - AI recommendation
+- Live queue summary
+- Average waiting time monitoring
 - Add customer functionality
 - Serve customer functionality
 - Additional counter recommendation
@@ -65,6 +67,16 @@ The dashboard contains three billing counters and an AI Recommendation section f
 The prototype is being validated with real users to understand whether the queue information, waiting-time estimation, and AI recommendation are easy to understand and useful.
 
 User feedback will be used to improve the prototype.
+## Screenshots
+
+### Main Dashboard
+
+![Main Dashboard](screenshots/dashboard-main.png)
+
+### AI Recommendation
+
+![AI Recommendation](screenshots/dashboard-ai-recommendation.png)
+
 
 ## Project Status
 
