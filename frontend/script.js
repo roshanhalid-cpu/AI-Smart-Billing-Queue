@@ -106,6 +106,7 @@ function addCustomer(counterNumber) {
     );
 
     updateAIRecommendation();
+    updateQueueSummary();
 }
 
 // Update AI Recommendation
@@ -167,4 +168,42 @@ function serveCustomer(counterNumber) {
     );
 
     updateAIRecommendation();
+    updateQueueSummary();
 }
+function updateQueueSummary() {
+    const totalCustomers = counters.reduce(
+        (total, counter) => total + counter.customers,
+        0
+    );
+
+    const totalWaitingTime = counters.reduce(
+        (total, counter) =>
+            total + calculateWaitingTime(counter.customers),
+        0
+    );
+
+    const averageWaitingTime =
+        totalWaitingTime / counters.length;
+
+    const highQueues = counters.filter(
+        counter => getQueueStatus(counter.customers) === "HIGH"
+    ).length;
+
+    const availableCounters = counters.filter(
+        counter => counter.customers <= 3
+    ).length;
+
+    document.getElementById("totalCustomers").textContent =
+        totalCustomers;
+
+    document.getElementById("averageWaitingTime").textContent =
+        averageWaitingTime.toFixed(1) + " min";
+
+    document.getElementById("highQueues").textContent =
+        highQueues;
+
+    document.getElementById("availableCounters").textContent =
+        availableCounters;
+}
+
+updateQueueSummary();
